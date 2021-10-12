@@ -39,28 +39,32 @@ struct PrivateView: View
     var body: some View
     {
         
-        TabView
+        VStack
         {
-            List(servers)
+            TabView
             {
-                server in PrivateServerRow(server: server)
+               
+                List(servers)
+                {
+                
+                    server in PrivateServerRow(server: server)
+                }.background(Color.white)
+                .tabItem
+                {
+                    Image(systemName: "cloud.fill")
+                    Text("Servers")
+                }.padding()
+                Text("Add")
+                .tabItem
+                {
+                        Image(systemName: "plus.app")
+                        Text("Add")
+                }.padding()
                 
             }
-            .tabItem
-            {
-                Image(systemName: "cloud.fill")
-                Text("Servers")
-            }.padding(10)
-            Text("Add")
-              
-                
-            .tabItem
-            {
-                    Image(systemName: "plus.app")
-                    Text("Add")
-            }
-            
         }
+        .padding()
+       
     }
 }
 

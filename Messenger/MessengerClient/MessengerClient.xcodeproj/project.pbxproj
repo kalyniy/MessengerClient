@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		374CC8692714DA7D0049294E /* HomePublic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374CC8682714DA7D0049294E /* HomePublic.swift */; };
+		374CC8722714DB920049294E /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374CC8712714DB920049294E /* Device.swift */; };
+		374CC8742714DBB50049294E /* UserRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374CC8732714DBB50049294E /* UserRegister.swift */; };
+		374CC8762714DBD40049294E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374CC8752714DBD40049294E /* User.swift */; };
+		374CC8782714DCA90049294E /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374CC8772714DCA90049294E /* Settings.swift */; };
+		374CC87A2714DDA00049294E /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374CC8792714DDA00049294E /* Http.swift */; };
+		374CC87D27151F6B0049294E /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374CC87C27151F6B0049294E /* Functions.swift */; };
 		37963232270A6B39003C8F16 /* MessengerClientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37963231270A6B39003C8F16 /* MessengerClientApp.swift */; };
 		37963234270A6B39003C8F16 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37963233270A6B39003C8F16 /* ContentView.swift */; };
 		37963236270A6B3A003C8F16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37963235270A6B3A003C8F16 /* Assets.xcassets */; };
@@ -16,6 +23,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		374CC8682714DA7D0049294E /* HomePublic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePublic.swift; sourceTree = "<group>"; };
+		374CC8712714DB920049294E /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		374CC8732714DBB50049294E /* UserRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegister.swift; sourceTree = "<group>"; };
+		374CC8752714DBD40049294E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		374CC8772714DCA90049294E /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		374CC8792714DDA00049294E /* Http.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Http.swift; sourceTree = "<group>"; };
+		374CC87B2714E0540049294E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		374CC87C27151F6B0049294E /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		3796322E270A6B39003C8F16 /* MessengerClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessengerClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37963231270A6B39003C8F16 /* MessengerClientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerClientApp.swift; sourceTree = "<group>"; };
 		37963233270A6B39003C8F16 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +51,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		374CC86A2714DB4A0049294E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				374CC8712714DB920049294E /* Device.swift */,
+				374CC8732714DBB50049294E /* UserRegister.swift */,
+				374CC8752714DBD40049294E /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		37963225270A6B39003C8F16 = {
 			isa = PBXGroup;
 			children = (
@@ -55,11 +80,16 @@
 		37963230270A6B39003C8F16 /* MessengerClient */ = {
 			isa = PBXGroup;
 			children = (
+				374CC87B2714E0540049294E /* Info.plist */,
+				374CC86A2714DB4A0049294E /* Models */,
 				3799D674270A92C1000E7F28 /* Views */,
 				37963231270A6B39003C8F16 /* MessengerClientApp.swift */,
 				37963233270A6B39003C8F16 /* ContentView.swift */,
 				37963235270A6B3A003C8F16 /* Assets.xcassets */,
 				37963237270A6B3A003C8F16 /* Preview Content */,
+				374CC8772714DCA90049294E /* Settings.swift */,
+				374CC8792714DDA00049294E /* Http.swift */,
+				374CC87C27151F6B0049294E /* Functions.swift */,
 			);
 			path = MessengerClient;
 			sourceTree = "<group>";
@@ -77,6 +107,7 @@
 			children = (
 				3799D675270A92E0000E7F28 /* PublicView.swift */,
 				3799D677270A96F3000E7F28 /* PrivateView.swift */,
+				374CC8682714DA7D0049294E /* HomePublic.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -152,9 +183,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				37963234270A6B39003C8F16 /* ContentView.swift in Sources */,
+				374CC8742714DBB50049294E /* UserRegister.swift in Sources */,
 				3799D676270A92E0000E7F28 /* PublicView.swift in Sources */,
+				374CC8692714DA7D0049294E /* HomePublic.swift in Sources */,
+				374CC87D27151F6B0049294E /* Functions.swift in Sources */,
+				374CC8762714DBD40049294E /* User.swift in Sources */,
 				3799D678270A96F3000E7F28 /* PrivateView.swift in Sources */,
+				374CC8782714DCA90049294E /* Settings.swift in Sources */,
 				37963232270A6B39003C8F16 /* MessengerClientApp.swift in Sources */,
+				374CC8722714DB920049294E /* Device.swift in Sources */,
+				374CC87A2714DDA00049294E /* Http.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +326,7 @@
 				DEVELOPMENT_TEAM = Y8PS23A238;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MessengerClient/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -318,6 +357,7 @@
 				DEVELOPMENT_TEAM = Y8PS23A238;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MessengerClient/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
