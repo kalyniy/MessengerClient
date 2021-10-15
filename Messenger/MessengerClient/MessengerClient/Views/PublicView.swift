@@ -16,7 +16,7 @@ struct PublicView: View
     
     @State private var isLoginValid: Bool = false
     @State private var shouldShowLoginAlert: Bool = false
-    @State private var response: String = ""
+    @State private var userDTO: UserDTO = UserDTO()
     var body: some View
     {
         NavigationView
@@ -54,30 +54,25 @@ struct PublicView: View
                             .stroke(Color.black, lineWidth: 1)
                             .padding(.horizontal, 40)
                             )
-                NavigationLink(destination: HomePublic(item: response), isActive: $isLoginValid)
+                NavigationLink(destination: HomePublic(searchPrompt: "", isEditing: true, userDTO: userDTO), isActive: $isLoginValid)
                 {
                     Button(action:
                         {
                             let user: User = User(username: username, password: password)
                             let json = user.toJson()
                             let url = Settings.publicAPI + "auth/login"
-                            Http().Post(address: url, content: json)
+                            Http().LoginPost(address: url, content: json)
                             {
-                                (Response) in
-                            
-                                response = Response
-                                //print(response)
-                                
-                                let success = response.contains("success\":true") // i dont know how to parse json, yet.
-//                              print(success)
-                                if success {
-                                  self.isLoginValid = true //trigger NavigationLink
-                                }
-                                else {
-                                  self.shouldShowLoginAlert = true //trigger Alert
-                                }
-                                
-                                        
+                                result in
+                               switch result {
+                                   case .success(let user):
+                                        userDTO = user
+                                       DispatchQueue.main.async {
+                                           isLoginValid = true
+                                       }
+                                   case .failure(let error):
+                                       print(error.localizedDescription)
+                               }
                             }
                         })
                     {

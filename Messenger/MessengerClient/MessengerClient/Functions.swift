@@ -10,10 +10,10 @@ import SwiftUI
 
 class Functions
 {
-    func convertStringToDictionary(text: String) -> [String: String]? {
+    static func convertStringToDictionary(text: String) -> [String: AnyObject]? {
         if let data = text.data(using: .utf8) {
             do {
-                let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String:String]
+                let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String:AnyObject]
                 return json
             } catch {
                 print("Something went wrong")
